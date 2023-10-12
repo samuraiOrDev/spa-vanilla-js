@@ -5,6 +5,7 @@ import '@/screens/Home.js';
 import '@/screens/Contact.js';
 import '@/components/Navegation.js';
 import '@/components/Footer.js';
+import '@/components/BarSeparator.js';
 
 import { loadContentForRoute } from './lib';
 

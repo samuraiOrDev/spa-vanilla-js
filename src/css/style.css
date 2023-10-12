@@ -1,4 +1,44 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'); */
+
 :root {
     --primary: #C778DD;
     --gray: #ABB2BF;
+    --background: #282C33;
+    --background-dark: #1E1E1E;
+    --white: #FFF;
+    --p-20: 20px;
 }
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Victor Mono', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    background-color: var(--background);
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: var(--p-20) var(--p-20);
+}
+
+#text-dr-who::before {
+    top: 0;
+    height: 50px;
+    width: 50px;
+    content: 'aaa';
+    background: var(--gray);
+    position: absolute;
+    background-image: url(${ComillasSvg});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

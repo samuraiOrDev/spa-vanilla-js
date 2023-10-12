@@ -1,3 +1,7 @@
+import '../components/Home/HeroBanner';
+import '../components/Home/TextDrWho';
+import '../components/Home/Projects';
+
 class Home extends HTMLElement {
   constructor() {
     super();
@@ -9,11 +13,10 @@ class Home extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
-        <style>
-          /* Estilos para el botón personalizado */
-        </style>
-        <p>Home Page</p>
+    this.shadowRoot.innerHTML = /* html */`
+        <hero-banner-component></hero-banner-component>
+        <text-dr-who-component></text-dr-who-component>
+        <projects-component></projects-component>
       `;
   }
 }
