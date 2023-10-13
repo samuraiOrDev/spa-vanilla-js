@@ -1,9 +1,9 @@
 /* eslint-disable object-curly-newline */
 import '../Hash';
-import ViewAllSVG from '../../aseets/View-all.svg';
 import ChertNodes from '../../aseets/img/chertnodes.jpg';
 import ProtectX from '../../aseets/img/protectx.png';
 import Kahoot from '../../aseets/img/kahoot.png';
+import '../Link';
 import './CardProject';
 
 class Projects extends HTMLElement {
@@ -76,7 +76,7 @@ class Projects extends HTMLElement {
         flex-direction: column;
         max-width: 340px;
         margin: 0 auto;
-        gap: 0 rem;
+        gap: 0rem;
       }
     }
     `;
@@ -92,7 +92,7 @@ class Projects extends HTMLElement {
                 <div class="bar-primary"></div>
             </div>
             <div class="viewn-alls">
-              <img src=${ViewAllSVG} title="All projects" />
+            <link-component to='/projects' title='Viewn All'></link-component>
             </div>
           </div>
           <div class="container-card">

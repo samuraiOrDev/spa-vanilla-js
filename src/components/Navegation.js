@@ -1,4 +1,3 @@
-import { loadContentForRoute } from '../lib';
 import LogoSvg from '../aseets/Logo.svg';
 import './Hash';
 
@@ -34,9 +33,6 @@ class Navegation extends HTMLElement {
       text-decoration: none;
       color: var(--white);
     }
-    .active {
-      color: var(--primary) !important;
-    }
     @media (max-width: 500px) {
       nav { 
         height: auto;
@@ -50,20 +46,6 @@ class Navegation extends HTMLElement {
 
   connectedCallback() {
     this.render();
-    this.shadowRoot.querySelector('nav').addEventListener('click', (event) => {
-      this.shadowRoot.querySelectorAll('nav a').forEach((element) => {
-        if (element.classList.contains('active')) { element.removeAttribute('class'); }
-      });
-
-      if (event.target.tagName === 'A') {
-        event.preventDefault();
-        const route = event.target.getAttribute('href');
-
-        window.history.pushState({ route }, '', route);
-        if (route === window.location.pathname) { event.target.setAttribute('class', 'active'); }
-        loadContentForRoute(route);
-      }
-    });
   }
 
   render() {
@@ -77,21 +59,19 @@ class Navegation extends HTMLElement {
         <div class="links">
           <div>
             <hash-component></hash-component>
-            <a href="/home">
-              Home
-            </a>
+            <link-component to='/' title='Home' ></link-component>
           </div>
           <div>
             <hash-component></hash-component>
-            <a href="/about">
-              About
-            </a>
+            <link-component to='/about' title='About'></link-component>
           </div>
           <div>
             <hash-component></hash-component>
-            <a href="/contact">
-              Contact
-            </a>
+            <link-component to='/contact' title='Contact'></link-component>
+          </div>
+          <div>
+            <hash-component></hash-component>
+            <link-component to='/projects' title='Projects'></link-component>
           </div>
         </div>
       </nav>

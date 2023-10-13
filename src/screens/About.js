@@ -1,3 +1,6 @@
+import '../components/About/AboutMe';
+import '../components/About/Skills';
+
 class About extends HTMLElement {
   constructor() {
     super();
@@ -9,11 +12,9 @@ class About extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
-        <style>
-          /* Estilos para el botón personalizado */
-        </style>
-        <p>About Page</p>
+    this.shadowRoot.innerHTML = /* html */`
+    <about-me-contact-component></about-me-contact-component>
+    <skills-about-me-component></skills-about-me-component>
       `;
   }
 }

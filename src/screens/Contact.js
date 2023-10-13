@@ -1,3 +1,5 @@
+import '../components/Contact/ContactHome';
+
 class Contact extends HTMLElement {
   constructor() {
     super();
@@ -9,11 +11,8 @@ class Contact extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
-        <style>
-          /* Estilos para el botón personalizado */
-        </style>
-        <p>Contact Page</p>
+    this.shadowRoot.innerHTML = /* html */ `
+    <contact-section-component></contact-section-component>
       `;
   }
 }

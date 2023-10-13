@@ -1,3 +1,5 @@
+import '../Link';
+
 class CardProject extends HTMLElement {
   constructor() {
     super();
@@ -31,6 +33,12 @@ class CardProject extends HTMLElement {
     .card {
       margin-top: 40px;
       border: 1px solid var(--gray);
+      transition: all 0.3s ease-out;
+      cursor: pointer;
+      width: 340px;
+    }
+    .card:hover {
+      transform: scale(1.02);
     }
     .card .content {
       
@@ -72,9 +80,10 @@ class CardProject extends HTMLElement {
 
     this.shadowRoot.innerHTML = /* html */`
     <style>${CardProject.styles}</style>
+    ${img ? (/* html */`
         <div class="card">
           <div class="img">
-            <img src=${img}  title=${title}/>
+            <img src=${img}  title=${title} style="width: 340px;"/>
           </div>
           <div class="content">
             <div class="title">
@@ -89,7 +98,21 @@ class CardProject extends HTMLElement {
               <button>Cached</button>
             </div>
           </div>
-        </div>
+        </div>`) : (/* html */ `
+          <div class="card">
+            <div class="content">
+              <div class="title">
+                <span class="gray">${subTitle}</span>
+              </div>
+              <div class="sub-title">
+                <p class="white">${title}</p>
+                <span class='gray'>${des}</span>
+              </div>
+              <div class="buttons">
+                <button>Github</button>
+              </div>
+            </div>
+          </div>`)}
       `;
   }
 }

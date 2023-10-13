@@ -3,6 +3,8 @@ import '@/css/style.css';
 import '@/screens/About.js';
 import '@/screens/Home.js';
 import '@/screens/Contact.js';
+import '@/screens/Projects.js';
+import '@/screens/NoFound.js';
 import '@/components/Navegation.js';
 import '@/components/Footer.js';
 import '@/components/BarSeparator.js';

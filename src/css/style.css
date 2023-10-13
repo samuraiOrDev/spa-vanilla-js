@@ -41,4 +41,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
+
+
+.skills-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: flex-end;
+    grid-gap: 2rem;
+}
