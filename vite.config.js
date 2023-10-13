@@ -2,13 +2,13 @@
 import { defineConfig } from 'vite';
 import path from 'node:path';
 
-const folderName = `${path.basename(process.cwd())}/`;
+/* const folderName = `${path.basename(process.cwd())}/`; */
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
-const base = mode === 'production' ? `/${folderName}` : '/';
+/* const base = mode === 'production' ? `/${folderName}` : '/'; */
 
 export default defineConfig({
   root: 'src',
-  base,
+  base: '/',
   mode,
   envDir: '../',
   publicDir: '../public',
