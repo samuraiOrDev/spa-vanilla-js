@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { defineConfig } from 'vite';
-import path from 'node:path';
+// import path from 'node:path';
 
 /* const folderName = `${path.basename(process.cwd())}/`; */
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
